@@ -379,25 +379,7 @@
     </footer>
 
     <script>
-        // ===============================================
-        // MENU MOBILE (HAMBÚRGUER)
-        // ===============================================
-const btnMenuMobile = document.getElementById('btn-menu-mobile');
-const navPrincipal = document.querySelector('nav[aria-label="Menu principal"]');
 
-if (btnMenuMobile && navPrincipal) {
-    btnMenuMobile.addEventListener('click', function() {
-        const aberto = navPrincipal.classList.toggle('ativo');
-        btnMenuMobile.setAttribute('aria-expanded', aberto);
-    });
-
-    // Fecha o menu automaticamente ao clicar num link
-    navPrincipal.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            navPrincipal.classList.remove('ativo');
-            btnMenuMobile.setAttribute('aria-expanded', 'false');
-        });
-    });
 }  // ===============================================
         // LEITURA DE DESCRIÇÃO DAS IMAGENS (AUDIODESCRIÇÃO)
         // ===============================================
