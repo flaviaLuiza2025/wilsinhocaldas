@@ -693,3 +693,85 @@ h2 {
     outline: 3px solid #ffffff;
     outline-offset: 2px;
 }
+/* ===============================================
+   RESPONSIVIDADE (TELEMÓVEL E TABLET)
+   =============================================== */
+
+/* Garante que nenhuma imagem ultrapasse a largura do ecrã */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Botão hambúrguer oculto no computador */
+.menu-mobile-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    color: inherit;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    /* Cabeçalho e Menu Mobile */
+    .cabecalho-conteudo {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .menu-mobile-btn {
+        display: block;
+    }
+
+    nav[aria-label="Menu principal"] {
+        display: none;
+        width: 100%;
+        order: 4;
+        margin-top: 1rem;
+    }
+
+    nav[aria-label="Menu principal"].ativo {
+        display: block;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 0.8rem;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    /* Secções lado a lado passam a ficar em coluna */
+    .hero-conteudo,
+    .sobre-conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .botoes {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* Grelhas passam para 1 coluna */
+    .videos-grid,
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+    /* Cartões da agenda empilhados */
+    .evento {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    /* Rodapé empilhado */
+    .rodape-conteudo,
+    .rodape-inferior {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+}
