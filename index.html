@@ -388,104 +388,114 @@
 
     <script>
 
-}  // ===============================================
-        // LEITURA DE DESCRIÇÃO DAS IMAGENS (AUDIODESCRIÇÃO)
-        // ===============================================
-        function lerDescricao(botao) {
-            if ('speechSynthesis' in window) {
-                window.speechSynthesis.cancel();
-
-                // Busca automaticamente o atributo 'alt' da imagem dentro do mesmo container
-                const container = botao.closest('.hero-imagem, .sobre-imagem, figure');
-                const imagem = container ? container.querySelector('img') : null;
-                const texto = imagem ? imagem.alt : '';
-
-                if (texto) {
-                    const fala = new SpeechSynthesisUtterance(texto);
-                    fala.lang = 'pt-BR';
-                    fala.rate = 1.0;
-                    window.speechSynthesis.speak(fala);
-                }
-            } else {
-                alert('O seu navegador não suporta a funcionalidade de leitura de voz.');
-            }
-        }
-
-        // ===============================================
-        // CONTROLE DE TAMANHO DE FONTE COM PERSISTÊNCIA
-        // ===============================================
-        (function() {
-            const TAMANHO_PADRAO = 18; // Tamanho padrão em px
-            const TAMANHO_MINIMO = 14;  // Limite mínimo
-            const TAMANHO_MAXIMO = 26;  // Limite máximo
-            const PASSO = 2;            // Incremento/Decremento a cada clique
-
-            let tamanhoAtual = parseInt(localStorage.getItem('tamanhoFontePadrao')) || TAMANHO_PADRAO;
-
-            aplicarTamanhoFonte(tamanhoAtual);
-
-            function aplicarTamanhoFonte(tamanho) {
-                document.body.style.fontSize = tamanho + 'px';
-                localStorage.setItem('tamanhoFontePadrao', tamanho);
-            }
-
-            document.getElementById('btn-aumentar-fonte').addEventListener('click', function() {
-                if (tamanhoAtual < TAMANHO_MAXIMO) {
-                    tamanhoAtual += PASSO;
-                    aplicarTamanhoFonte(tamanhoAtual);
-                }
-            });
-
-            document.getElementById('btn-diminuir-fonte').addEventListener('click', function() {
-                if (tamanhoAtual > TAMANHO_MINIMO) {
-                    tamanhoAtual -= PASSO;
-                    aplicarTamanhoFonte(tamanhoAtual);
-                }
-            });
-
-            document.getElementById('btn-resetar-fonte').addEventListener('click', function() {
-                tamanhoAtual = TAMANHO_PADRAO;
-                aplicarTamanhoFonte(tamanhoAtual);
-            });
-        })();
-        <script>
+ // ===============================================
+// MENU HAMBURGUER
+// ===============================================
 document.addEventListener('DOMContentLoaded', function () {
 
     const botao = document.getElementById('menu-mobile-btn');
     const menu = document.getElementById('menu-principal');
-    const icone = botao.querySelector('i');
 
-    botao.addEventListener('click', function () {
+    if (botao && menu) {
+        const icone = botao.querySelector('i');
 
-        const aberto = menu.classList.toggle('ativo');
+        botao.addEventListener('click', function () {
+            const aberto = menu.classList.toggle('ativo');
 
-        botao.setAttribute('aria-expanded', aberto);
+            botao.setAttribute('aria-expanded', aberto);
 
-        botao.setAttribute(
-            'aria-label',
-            aberto ? 'Fechar menu' : 'Abrir menu'
-        );
-
-        icone.classList.toggle('fa-bars', !aberto);
-        icone.classList.toggle('fa-xmark', aberto);
-
-    });
-
-    menu.querySelectorAll('a').forEach(function (link) {
-
-        link.addEventListener('click', function () {
-            menu.classList.remove('ativo');
-            botao.setAttribute('aria-expanded', 'false');
-            botao.setAttribute('aria-label', 'Abrir menu');
-
-            icone.classList.remove('fa-xmark');
-            icone.classList.add('fa-bars');
+            if (icone) {
+                icone.classList.toggle('fa-bars', !aberto);
+                icone.classList.toggle('fa-xmark', aberto);
+            }
         });
 
-    });
+        // Fecha o menu depois de clicar em uma opção
+        menu.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                menu.classList.remove('ativo');
+                botao.setAttribute('aria-expanded', 'false');
 
+                if (icone) {
+                    icone.classList.remove('fa-xmark');
+                    icone.classList.add('fa-bars');
+                }
+            });
+        });
+    }
+
+    // ===============================================
+    // CONTROLE DE TAMANHO DA FONTE
+    // ===============================================
+    const aumentar = document.getElementById('btn-aumentar-fonte');
+    const diminuir = document.getElementById('btn-diminuir-fonte');
+    const resetar = document.getElementById('btn-resetar-fonte');
+
+    const PADRAO = 18;
+    const MINIMO = 14;
+    const MAXIMO = 26;
+    let tamanho = parseInt(localStorage.getItem('tamanhoFontePadrao')) || PADRAO;
+
+    function aplicarFonte() {
+        document.body.style.fontSize = tamanho + 'px';
+        localStorage.setItem('tamanhoFontePadrao', tamanho);
+    }
+
+    aplicarFonte();
+
+    if (aumentar) {
+        aumentar.addEventListener('click', function () {
+            if (tamanho < MAXIMO) {
+                tamanho += 2;
+                aplicarFonte();
+            }
+        });
+    }
+
+    if (diminuir) {
+        diminuir.addEventListener('click', function () {
+            if (tamanho > MINIMO) {
+                tamanho -= 2;
+                aplicarFonte();
+            }
+        });
+    }
+
+    if (resetar) {
+        resetar.addEventListener('click', function () {
+            tamanho = PADRAO;
+            aplicarFonte();
+        });
+    }
 });
-</script>
+
+// ===============================================
+// AUDIODESCRIÇÃO DAS IMAGENS
+// ===============================================
+function lerDescricao(botao) {
+    if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+
+        const container = botao.closest(
+            '.hero-imagem, .sobre-imagem, figure'
+        );
+
+        const imagem = container
+            ? container.querySelector('img')
+            : null;
+
+        const texto = imagem ? imagem.alt : '';
+
+        if (texto) {
+            const fala = new SpeechSynthesisUtterance(texto);
+            fala.lang = 'pt-BR';
+            fala.rate = 1.0;
+            window.speechSynthesis.speak(fala);
+        }
+    } else {
+        alert('Seu navegador não suporta leitura de voz.');
+    }
+}
     </script>
 </body>
 </html>
