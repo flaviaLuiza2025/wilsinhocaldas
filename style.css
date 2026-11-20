@@ -697,81 +697,139 @@ h2 {
    RESPONSIVIDADE (TELEMÓVEL E TABLET)
    =============================================== */
 
-/* Garante que nenhuma imagem ultrapasse a largura do ecrã */
-img {
-    max-width: 100%;
-    height: auto;
-}
+/* MENU HAMBURGUER */
 
-/* Botão hambúrguer oculto no computador */
 .menu-mobile-btn {
     display: none;
-    background: none;
-    border: none;
-    font-size: 1.6rem;
-    color: inherit;
+    background: transparent;
+    border: 2px solid #ffbf00;
+    color: #ffffff;
+    font-size: 25px;
+    padding: 8px 14px;
+    border-radius: 6px;
     cursor: pointer;
 }
 
-@media (max-width: 768px) {
-    /* Cabeçalho e Menu Mobile */
+/* TABLETS E CELULARES */
+
+@media (max-width: 900px) {
+
     .cabecalho-conteudo {
+        flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        padding: 15px 0;
     }
 
     .menu-mobile-btn {
         display: block;
+        order: 2;
     }
 
-    nav[aria-label="Menu principal"] {
+    nav#menu-principal {
         display: none;
         width: 100%;
         order: 4;
-        margin-top: 1rem;
+        margin-top: 10px;
     }
 
-    nav[aria-label="Menu principal"].ativo {
+    nav#menu-principal.ativo {
         display: block;
     }
 
     .menu {
+        display: flex;
         flex-direction: column;
-        gap: 0.8rem;
-        text-align: center;
-        padding: 1rem 0;
+        width: 100%;
+        gap: 5px;
     }
 
-    /* Secções lado a lado passam a ficar em coluna */
+    .menu li {
+        width: 100%;
+    }
+
+    .menu a {
+        display: block;
+        text-align: center;
+        padding: 12px;
+    }
+
+    .acessibilidade-fonte,
+    .redes-sociais {
+        order: 3;
+    }
+
     .hero-conteudo,
     .sobre-conteudo {
-        flex-direction: column;
-        text-align: center;
+        grid-template-columns: 1fr;
+        gap: 25px;
     }
 
-    .botoes {
-        justify-content: center;
-        flex-wrap: wrap;
+    .hero {
+        padding: 40px 0;
     }
 
-    /* Grelhas passam para 1 coluna */
+    .secao {
+        padding: 45px 0;
+    }
+
+    .destaques {
+        grid-template-columns: 1fr;
+    }
+
     .videos-grid,
     .galeria {
         grid-template-columns: 1fr;
     }
 
-    /* Cartões da agenda empilhados */
     .evento {
+        display: flex;
         flex-direction: column;
         text-align: center;
-        gap: 1rem;
     }
 
-    /* Rodapé empilhado */
-    .rodape-conteudo,
-    .rodape-inferior {
-        flex-direction: column;
-        text-align: center;
-        gap: 1.5rem;
+    .container {
+        width: 92%;
     }
+
+    iframe {
+        max-width: 100%;
+    }
+}
+
+/* CELULARES PEQUENOS */
+
+@media (max-width: 480px) {
+
+    body {
+        font-size: 16px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+
+    .botoes {
+        flex-direction: column;
+    }
+
+    .botoes .botao {
+        width: 100%;
+        text-align: center;
+    }
+
+    .acessibilidade-fonte button {
+        padding: 5px 8px;
+    }
+
+    .redes-sociais {
+        gap: 12px;
+    }
+
 }
