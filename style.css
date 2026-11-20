@@ -1,0 +1,695 @@
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    background: #ffffff;
+    color: #171717;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: #0645ad;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+.container {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   ACESSIBILIDADE
+========================================= */
+
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 20px;
+    background: #000;
+    color: #fff;
+    padding: 12px 18px;
+    z-index: 9999;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.skip-link:focus {
+    top: 20px;
+}
+
+
+/* Foco sempre visível */
+
+:focus-visible {
+    outline: 4px solid #ffbf00;
+    outline-offset: 4px;
+}
+
+
+/* =========================================
+   CABEÇALHO
+========================================= */
+
+.cabecalho {
+    background: #111111;
+    color: white;
+    border-bottom: 4px solid #ffbf00;
+}
+
+.cabecalho-conteudo {
+    min-height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.menu a {
+    display: block;
+
+    padding: 10px 14px;
+
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+
+    border-radius: 6px;
+}
+
+.menu a:hover {
+    background: #ffffff;
+    color: #111111;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    background: #eeeeee;
+    padding: 80px 0;
+}
+
+.hero-conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.subtitulo {
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    margin: 15px 0;
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-top: 0;
+}
+
+.hero-imagem img {
+    width: 100%;
+    max-height: 550px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+
+/* =========================================
+   BOTÕES
+========================================= */
+
+.botao {
+    display: inline-block;
+
+    padding: 14px 24px;
+
+    background: #0645ad;
+    color: #ffffff;
+
+    border: 3px solid #0645ad;
+    border-radius: 8px;
+
+    font-weight: bold;
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.botao:hover {
+    background: #ffffff;
+    color: #0645ad;
+}
+
+.botao-secundario {
+    background: #ffffff;
+    color: #111111;
+    border-color: #111111;
+}
+
+.botao-secundario:hover {
+    background: #111111;
+    color: #ffffff;
+}
+.voltar-topo {
+    display: inline-block;
+
+    padding: 14px 24px;
+
+    background: #0645ad;
+    color: #ffffff;
+
+    border: 3px solid #0645ad;
+    border-radius: 8px;
+
+    font-weight: bold;
+    text-decoration: none;
+
+    cursor: pointer;
+}
+.voltar-topo:hover {
+    background: #ffffff;
+    color: #0645ad;
+}
+/* =========================================
+   SEÇÕES
+========================================= */
+
+.secao {
+    padding: 80px 0;
+}
+
+.secao-destaque {
+    background: #f1f1f1;
+}
+
+
+/* =========================================
+   SOBRE
+========================================= */
+
+.sobre-conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.destaques {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.card {
+    padding: 25px;
+
+    background: #ffffff;
+
+    border: 2px solid #333;
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+.card strong,
+.card span {
+    display: block;
+}
+
+.card strong {
+    font-size: 2rem;
+}
+
+
+/* =========================================
+   MÚSICAS
+========================================= */
+
+.musicas {
+    display: grid;
+    gap: 20px;
+}
+
+.musica {
+    padding: 25px;
+
+    background: #ffffff;
+
+    border: 2px solid #333;
+    border-radius: 10px;
+}
+
+.musica h3 {
+    margin-bottom: 5px;
+}
+
+.musica audio {
+    width: 100%;
+    margin-top: 15px;
+}
+
+
+/* =========================================
+   AGENDA
+========================================= */
+
+.agenda {
+    display: grid;
+    gap: 20px;
+}
+
+.evento {
+    display: grid;
+
+    grid-template-columns: 100px 1fr auto;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 25px;
+
+    border: 2px solid #333;
+    border-radius: 10px;
+}
+
+.evento time {
+    text-align: center;
+}
+
+.evento time strong {
+    display: block;
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.evento time span {
+    font-weight: bold;
+}
+
+
+/* =========================================
+   GALERIA
+========================================= */
+
+.galeria {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.galeria figure {
+    margin: 0;
+
+    background: #ffffff;
+
+    border: 2px solid #333;
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.galeria img {
+    width: 100%;
+    height: 250px;
+
+    object-fit: cover;
+}
+
+.galeria figcaption {
+    padding: 15px;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   FORMULÁRIO
+========================================= */
+
+.formulario {
+    max-width: 800px;
+}
+
+.campo {
+    margin-bottom: 25px;
+}
+
+.campo label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+
+    padding: 14px;
+
+    background: #ffffff;
+    color: #111111;
+
+    border: 3px solid #333;
+    border-radius: 6px;
+}
+
+.campo textarea {
+    resize: vertical;
+}
+
+.campo small {
+    display: block;
+    margin-top: 5px;
+}
+
+
+/* =========================================
+   RODAPÉ
+========================================= */
+
+.rodape {
+    padding: 40px 0;
+
+    background: #111111;
+    color: #ffffff;
+}
+
+.rodape a {
+    color: #ffffff;
+}
+
+.rodape ul {
+    padding: 0;
+    list-style: none;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .cabecalho-conteudo {
+        flex-direction: column;
+        align-items: flex-start;
+
+        padding: 20px 0;
+    }
+
+    .menu {
+        width: 100%;
+    }
+
+    .menu li {
+        flex: 1 1 auto;
+    }
+
+    .menu a {
+        text-align: center;
+    }
+
+    .hero-conteudo,
+    .sobre-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .destaques {
+        grid-template-columns: 1fr;
+    }
+
+    .evento {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria img {
+        height: auto;
+    }
+}
+
+
+/* =========================================
+   REDUÇÃO DE MOVIMENTO
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+/* Container pai dos ícones */
+.redes-sociais {
+    display: flex;             /* Transforma o container em flexbox */
+    align-items: center;       /* Alinha verticalmente os ícones */
+    gap: 20px;                 /* Espaço de 20px entre cada ícone */
+}
+
+/* Estilo para os ícones */
+.redes-sociais i {
+    font-size: 24px;           /* Aumente ou diminua o tamanho do ícone aqui */
+    color: lch(98.62% 0.01 296.81);               /* Exemplo de cor para os ícones (opcional) */
+    transition: color 0.3s;    /* Transição suave de cor ao passar o mouse */
+}
+
+/* Efeito ao passar o mouse sobre o ícone (opcional) */
+.redes-sociais a:hover i {
+    color: #007bff;            /* Altera a cor quando o usuário passa o mouse */
+}
+.rodape .mapa-site {
+    margin-bottom: 20px;
+}
+
+.rodape .mapa-site h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.rodape .mapa-site ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.rodape .mapa-site a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.rodape .mapa-site a:hover {
+    color: #fff;
+}
+/* Layout da grade de vídeos */
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.video-card {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    padding-bottom: 15px;
+}
+
+.video-card h3 {
+    margin: 15px 10px 0 10px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/* Mantém a proporção 16:9 do vídeo */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* Contêiner da foto com o texto/botão embaixo */
+.card-imagem-acessivel {
+    display: flex;
+    flex-direction: column !important; /* Força os elementos a ficarem empilhados (Imagem em cima, texto embaixo) */
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Garante que a imagem ocupe a largura correta e não empurre o texto para o lado */
+.card-imagem-acessivel img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Estilo da legenda da imagem */
+.card-imagem-acessivel figcaption {
+    margin-top: 8px;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+/* Botão de ouvir a descrição posicionado bem abaixo da foto/legenda */
+.btn-ouvir-descricao {
+    margin-top: 10px;
+    padding: 8px 14px;
+    background-color: #0056b3;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-ouvir-descricao:hover {
+    background-color: #003d80;
+}
+
+.btn-ouvir-descricao:focus {
+    outline: 3px solid #ffbf47;
+}
+
+/* Ajuste específico para a Galeria */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.galeria figure {
+    margin: 0;
+}
+/* =========================================
+   CONTROLES DE FONTE / ACESSIBILIDADE
+========================================= */
+
+.acessibilidade-fonte {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.acessibilidade-fonte button {
+    background: #222222;
+    color: #ffffff;
+    border: 2px solid #ffbf00;
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.acessibilidade-fonte button:hover {
+    background: #ffbf00;
+    color: #111111;
+}
+
+.acessibilidade-fonte button:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 2px;
+}

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Site oficial do músico Wilsinho Caldas. Conheça sua história, vídeos, agenda de shows e entre em contato.">
+
+    <title>Wilsinho Caldas | Site Oficial</title>
+
+    <!-- Font Awesome para ícones de redes sociais -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Link de libras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+    <!-- Link para pular diretamente para o conteúdo -->
+    <a class="skip-link" href="#conteudo">
+        Pular para o conteúdo principal
+    </a>
+
+    <!-- Cabeçalho -->
+    <header class="cabecalho">
+        <div class="container cabecalho-conteudo">
+            <a href="#inicio" class="logo" aria-label="Página inicial - Wilsinho Caldas">
+                Wilsinho Caldas
+            </a>
+
+            <nav aria-label="Menu principal">
+                <ul class="menu">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#videos">Vídeos</a></li>
+                    <li><a href="#agenda">Agenda</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <!-- Controles de Acessibilidade (Tamanho da Fonte) -->
+            <div class="acessibilidade-fonte" role="region" aria-label="Controles de tamanho de texto">
+                <button id="btn-diminuir-fonte" aria-label="Diminuir tamanho do texto" title="Diminuir fonte">A-</button>
+                <button id="btn-resetar-fonte" aria-label="Restaurar tamanho original do texto" title="Tamanho padrão">A</button>
+                <button id="btn-aumentar-fonte" aria-label="Aumentar tamanho do texto" title="Aumentar fonte">A+</button>
+            </div>
+
+            <!-- Redes Sociais no Cabeçalho -->
+            <div class="redes-sociais">
+                <a href="https://www.facebook.com/wilsinho.caldas" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Wilsinho Caldas">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/wilsinhocaldas/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Wilsinho Caldas">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube de Wilsinho Caldas">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main id="conteudo">
+
+        <!-- Início -->
+        <section id="inicio" class="hero" aria-labelledby="titulo-principal">
+            <div class="container hero-conteudo">
+                <div class="hero-texto">
+                    <p class="subtitulo">MÚSICA • ARTE • EMOÇÃO</p>
+
+                    <h1 id="titulo-principal">
+                        Wilsinho Caldas
+                    </h1>
+
+                    <p>
+                        Música que conecta pessoas, histórias e emoções.
+                    </p>
+
+                    <div class="botoes">
+                        <a href="#videos" class="botao">
+                            Assistir vídeos
+                        </a>
+
+                        <a href="#agenda" class="botao botao-secundario">
+                            Ver agenda
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-imagem">
+                    <img
+                        src="imagem/wil_tocando1.jpeg"
+                        alt="Fotografia em plano médio de Wilsinho Caldas apresentando-se ao vivo. Ele está sentado, usa óculos e camisa cinza, e toca um violão elétrico enquanto canta no microfone em pedestal. À sua frente, sobre um suporte, há um notebook aberto. O painel ao fundo traz uma imagem decorativa sob luzes coloridas."
+                    >
+                    <button type="button" class="btn-ouvir-descricao" onclick="lerDescricao(this)" aria-label="Ouvir descrição da imagem de Wilsinho Caldas tocando violão">
+                        <i class="fa-solid fa-volume-high"></i> Ouvir descrição da foto
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre -->
+        <section id="sobre" class="secao" aria-labelledby="titulo-sobre">
+            <div class="container">
+                <h2 id="titulo-sobre">
+                    Sobre o músico
+                </h2>
+
+                <div class="sobre-conteudo">
+                    <div class="sobre-texto">
+                        <h4>Trajetória Musical</h4>
+                        <p>Sua trajetória profissional na música começou em 1981, na Concha Acústica, em Santos, onde deu os primeiros passos de uma carreira que, desde então, nunca mais parou. Músico versátil, com experiência em guitarra e violão, construiu ao longo dos anos uma carreira marcada por diferentes estilos, palcos e experiências.</p>
+
+                        <p>Durante sua trajetória na Baixada Santista, apresentou-se em diversos bares e casas da região, entre eles o Panela de Barro e o Lá em Casa, adquirindo experiência e consolidando seu trabalho como músico profissional.</p>
+
+                        <p>Em 1996, iniciou uma nova etapa de sua carreira ao realizar seu primeiro embarque em um navio de cruzeiro da Costa Cruzeiros. A partir daí, passou a atuar também no cenário musical internacional, embarcando posteriormente em diferentes navios e vivendo experiências profissionais em alto-mar.</p>
+
+                        <p>Ao longo dos anos, trabalhou em navios da MSC, participando de diferentes produções musicais e passando por embarcações como Rapsódia, Harmonia, Opera, Música e Orquesta. Essa experiência proporcionou contato com públicos de diferentes nacionalidades e ampliou ainda mais sua experiência como músico.</p>
+
+                        <p>Seu último período de embarques ocorreu em 2011, pela antiga companhia Ibero Cruzeiros, onde atuou nos navios Grand Celebration e Grand Mistral.</p>
+
+                        <p>Após sua experiência em cruzeiros, continuou sua carreira musical na Baixada Santista, participando de diversas bandas e projetos musicais. Ao longo de mais de quatro décadas de carreira, manteve-se ativo nos palcos, acompanhando diferentes formações e públicos.</p>
+
+                        <p>Seu repertório é marcado pela diversidade e inclui pop nacional e internacional, pop rock, MPB, samba e entre outros, permitindo que transite por diferentes ambientes e estilos musicais com versatilidade.</p>
+
+                        <p>Desde o início de sua carreira, em 1981, até os dias atuais, sua história é marcada pela paixão pela música, pela experiência adquirida em diferentes palcos e pela dedicação contínua à profissão. São mais de quatro décadas de trajetória musical, construídas com talento, experiência e amor pela arte de tocar.</p>
+                    </div>
+
+                    <div class="sobre-imagem">
+                        <img
+                            src="imagem/wil_cantando3.jpg"
+                            alt="Fotografia em plano médio de Wilsinho Caldas cantando em um evento interno. Ele é um homem de pele clara, cabelos curtos grisalhos nas laterais e calvo no topo, e usa óculos de armação redonda escura. Veste camisa social branca de mangas compridas dobradas até os antebraços, com pulseiras no pulso esquerdo e aliança. Segura um microfone preto com fio na mão direita e gesticula com a esquerda enquanto sorri olhando para a frente. Ao fundo, há uma parede clara com pontos de luz coloridos, cadeiras plásticas brancas e uma mesa com toalha estampada em vermelho e verde."
+                        >
+                        <button type="button" class="btn-ouvir-descricao" onclick="lerDescricao(this)" aria-label="Ouvir descrição da foto da seção Sobre">
+                            <i class="fa-solid fa-volume-high"></i> Ouvir descrição da foto
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <a href="#inicio" class="voltar-topo">↑ Voltar ao topo</a>
+
+        <!-- Vídeos -->
+        <section id="videos"
+                 class="secao secao-destaque"
+                 aria-labelledby="titulo-videos">
+            <div class="container">
+                <h2 id="titulo-videos">
+                    Vídeos e Apresentações
+                </h2>
+
+                <p>
+                    Assista a algumas das principais apresentações e trabalhos ao vivo.
+                </p>
+
+                <div class="videos-grid">
+                    <article class="video-card">
+                        <div class="video-container">
+                            <!-- Substitua o ID 'ID_DO_VIDEO_1' pelo ID do vídeo do YouTube -->
+                            <iframe 
+                                src="https://www.youtube.com/embed/ID_DO_VIDEO_1" 
+                                title="Apresentação ao vivo de Wilsinho Caldas" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <h3>Apresentação ao Vivo</h3>
+                    </article>
+
+                    <article class="video-card">
+                        <div class="video-container">
+                            <!-- YouTube -->
+                           <iframe 
+                                src="https://www.youtube.com/embed/MsK8QqYfGuM?si=Z5q6EFTGVIvi-ZMw" 
+                                title="Programa Mãe Terra - Wilsinho Caldas" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <h3>PROGRAMA MÃE TERRA - TVCOM SANTOS</h3>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <a href="#inicio" class="voltar-topo">↑ Voltar ao topo</a>
+
+        <!-- Agenda -->
+        <section id="agenda"
+                 class="secao"
+                 aria-labelledby="titulo-agenda">
+            <div class="container">
+                <h2 id="titulo-agenda">
+                    Agenda de shows
+                </h2>
+
+                <div class="agenda">
+                    <article class="evento">
+                        <time datetime="2026-09-15">
+                            <strong>15</strong>
+                            <span>SET</span>
+                        </time>
+
+                        <div>
+                            <h3>Show Especial</h3>
+                            <p>São Paulo - SP</p>
+                            <p>20h00</p>
+                        </div>
+
+                        <a href="#contato" class="botao">
+                            Mais informações
+                        </a>
+                    </article>
+
+                    <article class="evento">
+                        <time datetime="2026-10-10">
+                            <strong>10</strong>
+                            <span>OUT</span>
+                        </time>
+
+                        <div>
+                            <h3>Festival de Música</h3>
+                            <p>Santos - SP</p>
+                            <p>19h00</p>
+                        </div>
+
+                        <a href="#contato" class="botao">
+                            Mais informações
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <a href="#inicio" class="voltar-topo">↑ Voltar ao topo</a>
+
+        <!-- Galeria -->
+        <section id="galeria"
+                 class="secao secao-destaque"
+                 aria-labelledby="titulo-galeria">
+            <div class="container">
+                <h2 id="titulo-galeria">
+                    Galeria
+                </h2>
+
+                <div class="galeria">
+                    <figure>
+                        <img
+                            src="imagem/wil_cantando1.jpg"
+                            alt="Fotografia em plano médio de Wilsinho Caldas cantando no palco. Ele é um homem de pele clara, calvo e usa óculos. Veste camiseta rosa e calça jeans. Com o corpo inclinado de perfil, ele segura o microfone com a mão direita e canta sorrindo de olhos fechados. O ambiente tem iluminação cênica azul e fundo escuro com desenhos de notas musicais. Ao lado, observa-se uma mesa de som."
+                        >
+                        <figcaption>
+                            Apresentação ao vivo
+                        </figcaption>
+                        <button type="button" class="btn-ouvir-descricao" onclick="lerDescricao(this)" aria-label="Ouvir descrição da foto Apresentação ao vivo">
+                            <i class="fa-solid fa-volume-high"></i> Ouvir descrição da foto
+                        </button>
+                    </figure>
+
+                    <figure>
+                        <img
+                            src="imagem/wil_cantando2.jpg"
+                            alt="Fotografia em plano médio e ângulo inclinado de Wilsinho Caldas cantando em um palco intimista. Ele usa óculos de grau, camiseta camuflada em tons de cinza com uma estrela e a inscrição U.S. Army no peito, e calça bege com a mão esquerda no bolso. Segura o microfone com a mão direita e canta de perfil. Ao fundo, sob iluminação azul e roxa, há uma parede escura decorada com uma pauta e notas musicais estilizadas, uma caixa de som e outro microfone em pedestal."
+                        >
+                        <figcaption>
+                            Show acústico
+                        </figcaption>
+                        <button type="button" class="btn-ouvir-descricao" onclick="lerDescricao(this)" aria-label="Ouvir descrição da foto Show acústico">
+                            <i class="fa-solid fa-volume-high"></i> Ouvir descrição da foto
+                        </button>
+                    </figure>
+
+                    <figure>
+                        <img
+                            src="imagem/will_ilhaPalmas.jpg"
+                            alt="Fotografia em plano americano e de perfil de Wilsinho Caldas se apresentando ao ar livre sob uma tenda ao entardecer. Ele tem cabelos curtos, veste camisa e calça pretas, toca uma guitarra elétrica bege com correia e canta em um microfone apoiado em pedestal. Ao fundo, aparecem outros músicos da banda, incluindo um tecladista e um bumbo de bateria Yamaha, além de árvores e prédios iluminados.."
+                        >
+                        <figcaption>
+                            Festival de música
+                        </figcaption>
+                        <button type="button" class="btn-ouvir-descricao" onclick="lerDescricao(this)" aria-label="Ouvir descrição da foto Festival de música">
+                            <i class="fa-solid fa-volume-high"></i> Ouvir descrição da foto
+                        </button>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <a href="#inicio" class="voltar-topo">↑ Voltar ao topo</a>
+
+        <!-- Contato -->
+        <section id="contato" class="secao" aria-labelledby="titulo-contato">
+            <div class="container">
+                <h2 id="titulo-contato">Entre em contato</h2>
+
+                <p>Para shows, eventos, parcerias ou outras informações, envie uma mensagem.</p>
+
+                <form action="envia.php" method="POST" class="formulario">
+                    <div class="campo">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" autocomplete="name" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" autocomplete="email" aria-describedby="ajuda-email" required>
+                        <small id="ajuda-email">Informe um e-mail válido para receber a resposta.</small>
+                    </div>
+
+                    <div class="campo">
+                        <label for="assunto">Assunto</label>
+                        <select id="assunto" name="assunto">
+                            <option value="">Selecione uma opção</option>
+                            <option value="Contratação para show">Contratação para show</option>
+                            <option value="Parceria">Parceria</option>
+                            <option value="Informação">Informação</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
+                    </div>
+
+                    <button type="submit" class="botao">Enviar mensagem</button>
+                </form>
+            </div>
+        </section>
+        <a href="#inicio" class="voltar-topo">↑ Voltar ao topo</a>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <div class="container rodape-conteudo">
+
+            <!-- Mapa do Site -->
+            <nav aria-label="Mapa do site" class="mapa-site">
+                <h3>Mapa do Site</h3>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#videos">Vídeos</a></li>
+                    <li><a href="#agenda">Agenda</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="redes-sociais">
+                <a href="https://www.facebook.com/wilsinho.caldas" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Wilsinho Caldas">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/wilsinhocaldas/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Wilsinho Caldas">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube de Wilsinho Caldas">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+
+            <div class="rodape-inferior">
+                <p>
+                    &copy; 2026 Wilsinho Caldas. Todos os direitos reservados.
+                </p>
+
+                <nav aria-label="Links do rodapé">
+                    <ul>
+                        <li><a href="#inicio">Voltar ao início</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ===============================================
+        // LEITURA DE DESCRIÇÃO DAS IMAGENS (AUDIODESCRIÇÃO)
+        // ===============================================
+        function lerDescricao(botao) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+
+                // Busca automaticamente o atributo 'alt' da imagem dentro do mesmo container
+                const container = botao.closest('.hero-imagem, .sobre-imagem, figure');
+                const imagem = container ? container.querySelector('img') : null;
+                const texto = imagem ? imagem.alt : '';
+
+                if (texto) {
+                    const fala = new SpeechSynthesisUtterance(texto);
+                    fala.lang = 'pt-BR';
+                    fala.rate = 1.0;
+                    window.speechSynthesis.speak(fala);
+                }
+            } else {
+                alert('O seu navegador não suporta a funcionalidade de leitura de voz.');
+            }
+        }
+
+        // ===============================================
+        // CONTROLE DE TAMANHO DE FONTE COM PERSISTÊNCIA
+        // ===============================================
+        (function() {
+            const TAMANHO_PADRAO = 18; // Tamanho padrão em px
+            const TAMANHO_MINIMO = 14;  // Limite mínimo
+            const TAMANHO_MAXIMO = 26;  // Limite máximo
+            const PASSO = 2;            // Incremento/Decremento a cada clique
+
+            let tamanhoAtual = parseInt(localStorage.getItem('tamanhoFontePadrao')) || TAMANHO_PADRAO;
+
+            aplicarTamanhoFonte(tamanhoAtual);
+
+            function aplicarTamanhoFonte(tamanho) {
+                document.body.style.fontSize = tamanho + 'px';
+                localStorage.setItem('tamanhoFontePadrao', tamanho);
+            }
+
+            document.getElementById('btn-aumentar-fonte').addEventListener('click', function() {
+                if (tamanhoAtual < TAMANHO_MAXIMO) {
+                    tamanhoAtual += PASSO;
+                    aplicarTamanhoFonte(tamanhoAtual);
+                }
+            });
+
+            document.getElementById('btn-diminuir-fonte').addEventListener('click', function() {
+                if (tamanhoAtual > TAMANHO_MINIMO) {
+                    tamanhoAtual -= PASSO;
+                    aplicarTamanhoFonte(tamanhoAtual);
+                }
+            });
+
+            document.getElementById('btn-resetar-fonte').addEventListener('click', function() {
+                tamanhoAtual = TAMANHO_PADRAO;
+                aplicarTamanhoFonte(tamanhoAtual);
+            });
+        })();
+    </script>
+</body>
+</html>
