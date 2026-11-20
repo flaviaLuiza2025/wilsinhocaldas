@@ -833,3 +833,49 @@ h2 {
     }
 
 }
+@media (max-width: 900px) {
+
+    .cabecalho-conteudo {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .menu-mobile-btn {
+        display: block;
+        cursor: pointer;
+    }
+
+    nav#menu-principal {
+        display: none;
+        width: 100%;
+        order: 4;
+    }
+
+    nav#menu-principal.ativo {
+        display: block;
+    }
+
+    nav#menu-principal .menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav#menu-principal .menu li {
+        width: 100%;
+    }
+
+    nav#menu-principal .menu a {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        color: white;
+        text-align: center;
+        background: #222;
+    }
+}
